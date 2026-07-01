@@ -1,0 +1,268 @@
+.loginPageBody {
+  display: flex;
+
+  border-radius: 30px;
+}
+
+.userNameAndPassword {
+  background: linear-gradient(to right, #202020, #000000);
+  width: 900px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  overflow: hidden;
+}
+.welcome {
+  color: white;
+  margin-left: 50px;
+}
+
+.userNameAndPassword a {
+  display: block;
+
+  margin-top: 50px;
+  margin-left: 50px;
+  text-decoration: none;
+  color: rgb(32, 215, 69);
+  font-size: 20px;
+}
+
+.loginMotto {
+  margin-left: 50px;
+  color: darkgray;
+  margin-top: 0px;
+}
+
+.macroTeaser {
+  background: linear-gradient(to left, #004600, #012201);
+  width: 900px;
+  height: auto;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.submitButton {
+  margin-top: auto;
+  align-self: center;
+  margin-bottom: 30px;
+
+  width: 60%;
+  background-color: #4ade80;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.userNameAndPassword a:has(.submitButton) {
+  margin-top: auto;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.titleLink {
+  margin-top: 50px;
+  margin-left: 50px;
+
+  text-decoration: none;
+  color: #4ade80;
+  font-size: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sideOneBox input,
+.sideTwoBox input {
+  height: 20px;
+  width: 50%;
+  border-radius: 5px;
+  margin-left: 50px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #3c3b3b;
+}
+
+.showHideToggle,
+.signInQuestion {
+  color: white;
+  margin-left: 50px;
+}
+
+.signInQuestion {
+  margin-bottom: 50px;
+}
+
+.create {
+  color: rgb(32, 215, 69);
+}
+
+.copyRight::before {
+  content: "\00A9 ";
+  color: #000000;
+}
+
+.copyRight {
+  margin-top: 20px;
+}
+
+.topFuelLogo {
+  size: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fuelLogo {
+  height: 30px;
+  align-self: baseline;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.smallerTopLogo {
+  height: 100px;
+}
+
+.macroTeaser {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todaysMac {
+  height: 80px;
+
+  width: 50%;
+  color: #4ade80;
+  align-content: center;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  background-color: #004600;
+  border-radius: 5px;
+  border-color: #0e5d0e;
+  border: 1px solid green;
+}
+
+.todaysMac span {
+  font-size: 20px;
+  color: white;
+}
+
+.todaysMac p {
+  margin-left: 10px;
+}
+
+.todaysMac span span {
+  font-size: 14px;
+  color: #807d7dff;
+  margin-left: 6px;
+}
+
+.macBreakdown {
+  display: flex;
+  height: 60px;
+  gap: 8px;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.proteinBox,
+.carbBox,
+.fatBox {
+  padding: 20px;
+  border-radius: 5px;
+  color: #4ade80;
+  border-color: #0e5d0e;
+  align-content: center;
+  gap: 8px;
+  width: 60px;
+  background-color: #072107;
+}
+
+.proteinBox span,
+.carbBox span,
+.fatBox span {
+  font-size: 20px;
+  color: white;
+}
+
+.proteinBox p,
+.carbBox p,
+.fatBox p {
+  font-size: 10px;
+  color: #807d7dff;
+  text-align: center;
+  margin-top: auto;
+}
+
+@media (max-width: 480px) {
+  .titleLink,
+  .welcome,
+  .loginMotto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .login-form input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    display: flex;
+  }
+
+  .showHideToggle,
+  .signInQuestion {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .userNameAndPassword,
+  .macroTeaser {
+    width: 100%;
+  }
+
+  .userNameAndPassword {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0 30px;
+    overflow: hidden;
+  }
+
+  .macroTeaser {
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 0 10px;
+    overflow: hidden;
+    height: 250px;
+  }
+
+  .loginPageBody {
+    flex-direction: column;
+  }
+
+  .copyRight {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .todaysMac {
+    text-align: center;
+  }
+}

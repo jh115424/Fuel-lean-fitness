@@ -1,0 +1,93 @@
+.middleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 20px auto;
+  max-width: 1290px;
+  width: 100%;
+
+  background: linear-gradient(0deg, rgb(42, 41, 41), rgb(15, 15, 15) 50%)
+    no-repeat;
+  border-radius: 10px;
+}
+
+.heroRow {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.pageLogoAndImage p {
+  color: white;
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+.pageLogoAndImage span {
+  color: rgb(28 183 59);
+  font-size: larger;
+}
+.pageLogoAndImage h5 {
+  color: white;
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
+}
+
+.salmonBigBowl {
+  height: 220px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+@media (max-width: 480px) {
+  .middleContainer {
+    flex-direction: column;
+  }
+
+  .heroRow {
+    flex-direction: column;
+
+    width: 479px;
+  }
+
+  .pageLogoAndImage {
+    text-align: center;
+  }
+
+  .homePageMainImage {
+    align-self: center;
+    width: 479px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .salmonBigBowl {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .pageLogoAndImage p,
+  .pageLogoAndImage h5 {
+    margin-left: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .middleContainer {
+    max-width: 767px;
+  }
+  .salmonBigBowl {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

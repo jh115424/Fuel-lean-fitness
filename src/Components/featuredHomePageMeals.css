@@ -1,0 +1,95 @@
+.introTitle {
+  color: white;
+  margin-left: auto;
+  font-size: 20px;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.featuredRecipesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  padding: 0;
+  margin: 30px auto 0 auto;
+}
+
+.topBlock p {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.macroBlock p {
+  color: white;
+  opacity: 1;
+}
+
+.recipeCard {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+
+  background: #222;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.topBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topBlock img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+  object-fit: cover;
+}
+
+.topBlock p {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.macroBlock {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.macroBlock p {
+  color: white;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .featuredRecipesContainer {
+    flex: 0 0 calc((100% - 40px) / 3);
+    flex-wrap: wrap;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featuredRecipesContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex: 1 1 calc(33.333% - 16px);
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .introTitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

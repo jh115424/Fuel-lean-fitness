@@ -1,0 +1,109 @@
+.threeAddedMealsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  gap: 50px;
+}
+
+.foodLogContainer {
+  background-color: #0f1e30;
+  height: 550px;
+
+  border: 1px solid #1e3a50;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.loggedMealsContainer {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 30px;
+}
+
+.calories {
+  color: #38bdf8;
+}
+
+.loggedMealRow:last-child {
+  border-bottom: none;
+}
+
+.foodLogTitle {
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  align-items: center;
+  display: flex;
+}
+
+.mealPickTitle {
+  color: #38bdf8;
+}
+
+.addMealBtn,
+.clearMealBtn {
+  background-color: #38bdf8;
+  border-radius: 10px;
+  height: 35px;
+  width: 100px;
+}
+
+.underline {
+  width: 100%;
+  height: 0.1px;
+  background-color: #38bdf8;
+}
+
+.loggedMealRow {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid #1e3a50;
+}
+
+.featuredImg {
+  border: 1px solid #38bdf8;
+}
+
+.mealInfo {
+  margin-left: 20px;
+  justify-content: space-between;
+}
+
+.proteinInfo {
+  margin-left: auto;
+  margin-right: 20px;
+  color: #38bdf8;
+}
+
+/* Background gradient: #0d1520 to #0a0f1a
+Card background: #0f1e30
+Card border: #1e3a50
+Inner border/dividers: #152840
+Accent blue (buttons, labels, highlights): #38bdf8
+Muted text: #4a6080
+Body text: #e2e8f0
+Unfilled bar chart days: #1e3a50
+Button text: #0a0f1a */
+
+@media (max-width: 480px) {
+  .foodLogContainer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .addMealBtn {
+    margin-right: 10px;
+  }
+
+  .loggedMealsContainer {
+
+    gap: 40px;
+  }
+
+  
+}

@@ -1,0 +1,187 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.homePageBody {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #000000, #0a0a23);
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.topMenuGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.sideMenuBar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+  transition: width 0.3s ease-in-out;
+}
+
+.sideMenuBar.closed {
+  width: 0;
+  overflow: hidden;
+}
+
+.mainContent {
+  flex: 1;
+  width: auto;
+}
+
+.homePage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-left: 2px solid #2e2d2c;
+  border-right: 2px solid #2e2d2c;
+  padding: 20px 10px 20px 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-left: 20px;
+}
+
+.dashBoardPage {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(28 183 59);
+  text-decoration: none;
+  border-left: 2px solid #2e2d2c;
+  border-right: 2px solid #2e2d2c;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-sizing: border-box;
+}
+
+.dashBoardPage {
+  width: 100%;
+}
+
+.dashBoardImage {
+  display: block;
+}
+
+.mainMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(8, 7, 7);
+  border-left: 2px solid #2e2d2c;
+  border-right: 2px solid #2e2d2c;
+  border-bottom: 2px solid #2e2d2c;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 20px;
+  align-items: start;
+}
+
+.dashBoardLink a,
+.recipeLink a,
+.workoutLink a,
+.favoritesLink a,
+.progressLink a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.dashBoardImage,
+.sideMenuImage,
+.greenDumbbell {
+  height: 30px;
+}
+
+.dashBoard,
+.recipe,
+.workouts,
+.favorites,
+.progress {
+  color: white;
+  font-size: 16px;
+  margin: 0;
+}
+
+.topTitle {
+  font-size: 18px;
+  margin: 0;
+  color: white;
+}
+
+.dailyProgress {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.dashBoardLink,
+.recipeLink,
+.workoutLink,
+.favoritesLink,
+.progressLink {
+  margin-bottom: 20px;
+}
+
+.dashBoardLink,
+.recipeLink,
+.workoutLink,
+.favoritesLink,
+.progressLink {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .homePageBody {
+    flex-direction: column;
+  }
+
+  .sideMenuBar,
+  .recipeLink {
+    width: 100%;
+  }
+
+  .mainMenu,
+  .homePage {
+    margin-left: unset;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homePageBody {
+    flex-direction: column;
+  }
+
+  .sideMenuBar,
+  .recipeLink {
+    width: 100%;
+  }
+
+  .dailyProgress {
+    margin-top: 30px;
+  }
+  .homePage {
+    flex-direction: column;
+  }
+
+  .mainMenu,
+  .homePage {
+    margin-left: unset;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

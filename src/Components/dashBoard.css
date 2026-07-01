@@ -1,0 +1,97 @@
+.dashBoardContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #080d14, #070b14);
+}
+
+.topCalorieHeader {
+  position: relative;
+  top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashBoardTitle p {
+  color: #38bdf8;
+  font-size: 14px;
+}
+
+.dashBoardTitle h2 {
+  color: white;
+  line-height: 0.2;
+}
+
+.topCalorieHeader p,
+.topCalorieHeader header {
+  margin: 0;
+}
+
+.dailyCaloriesLeft {
+  background-color: #0f1e30;
+  text-align: center;
+  align-content: center;
+  border-radius: 10px;
+  width: 170px;
+  border: 1px solid #1e3a50;
+}
+
+.dailyCaloriesLeft p {
+  margin-top: 20px;
+  color: #4a6080;
+}
+
+.dailyCaloriesLeft {
+  color: #38bdf8;
+
+  margin-top: 5px;
+}
+
+.leftOverCalories {
+  line-height: 0.1;
+}
+
+.homeLink button {
+  margin-top: 400px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.homePageButton {
+  height: 40px;
+  background-color: #38bdf8;
+  margin-top: 400px;
+}
+
+.goHome {
+  height: 30px;
+}
+
+.dashBoardMainContent {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1.5;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .dashBoardMainContent {
+    display: flex;
+    flex-direction: column;
+  }
+}

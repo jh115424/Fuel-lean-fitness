@@ -1,0 +1,66 @@
+.goalsContainer {
+  background-color: #0f1e30;
+  height: 586px;
+  border: 2px solid rgb(28 183 59);
+  border-radius: 20px;
+}
+
+.goalsTitle {
+  margin: 20px 20px;
+  color: rgb(28 183 59);
+}
+
+.goalType {
+  margin-left: 20px;
+  color: darkgray;
+}
+
+.goalRow {
+  border-bottom: 0.5px solid #152840;
+  display: flex;
+  justify-content: space-between;
+}
+
+.goalRow:last-child {
+  border-bottom: none;
+}
+
+.goalButtons {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 20px;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-right: auto;
+}
+
+.edit,
+.save {
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(28 183 59);
+}
+
+.greenFlip {
+  color: rgb(28 183 59);
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.macro,
+title {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+
+    .edit,
+    .save {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

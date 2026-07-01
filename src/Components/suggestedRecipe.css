@@ -1,0 +1,32 @@
+.suggestedRecipeContainer {
+  border: 1px solid white;
+  height: 270px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  margin-top: 50px;
+  border-radius: 20px;
+  background-color: #0f1e30;
+}
+
+
+.suggestedRecipeImg {
+  height: 150px;
+  border-radius: 20px;
+  margin: 20px 20px;
+
+}
+
+.suggestedRecipeTitle {
+
+ color: #38bdf8;
+ margin-left: 20px;
+ font-size: 13px;
+
+}
+
+.suggestedRecipeName {
+
+  color: white;
+  margin-left: 20px;
+  font-size: 16px;
+
+}
