@@ -13,7 +13,7 @@ export default function Workouts() {
   useEffect(() => {
     const loadWorkouts = async () => {
       try {
-        const response = await getWorkouts();
+        const response = await getWorkouts(type);
         setData(response);
       } catch (err) {
         setError(err.message);
@@ -22,24 +22,24 @@ export default function Workouts() {
       }
     };
     loadWorkouts();
-  }, []);
+  }, [type]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
-
   const filteredWorkouts = data.filter((item) => {
     if (type === "all") return true;
 
     return item.type === type;
   });
+
   return (
     <>
       <div className="workoutsContainer">
         <div className="workoutsBanner">
-          <p className="bannerLabel">
+          <div className="bannerLabel">
             TODAY
             <header className="exerciseTitle">Push Day - Chest and Abs</header>
-          </p>
+          </div>
           <img
             src={blackWomanWorkingOut}
             className="bannerImage"
@@ -58,30 +58,63 @@ export default function Workouts() {
           >
             All
           </button>
-          <button onClick={() => setType("strength")} className={type === "strength" ? }>
+          <button
+            onClick={() => setType("strength")}
+            className={
+              type === "strength" ? "strength activeClass" : "strength"
+            }
+          >
             Strength
           </button>
-          <button onClick={() => setType("cardio")} className="cardioButton">
+          <button
+            onClick={() => setType("cardio")}
+            className={type === "cardio" ? "cardio activeClass" : "cardio"}
+          >
             Cardio
           </button>
           <button
             onClick={() => setType("stretching")}
-            className="stretchButton"
+            className={
+              type === "stretching" ? "stretching activeClass" : "stretching"
+            }
           >
             Stretching
           </button>
           <button
             onClick={() => setType("powerlifting")}
-            className="powerlifting"
+            className={
+              type === "powerlifting" ? "powerlifting active" : "powerlifting"
+            }
           >
             Powerlifting
           </button>
           <button
             onClick={() => setType("plyometrics")}
-            className="plyometricsButton"
+            className={
+              type === "plyometrics" ? "plyometrics active" : "plyometrics"
+            }
           >
             Plyometrics
           </button>
+        </div>
+
+        <div className="workoutsList">
+          {filteredWorkouts.map((item, index) => {
+            console.log(item);
+            return (
+              <div className="workoutCard" key={index}>
+                <p className="workoutName">{item.name}</p>
+                <p className="workoutType">{item.type}</p>
+                <p className="workoutDifficulty"> {item.difficulty}</p>
+                <p className="workoutMuscle">{item.muscle}</p>
+                <p className="workoutEquipment">{item.equipments}</p>
+                <div className="instructions">
+                  Workout Instructions
+                  <p className="workoutInstructions">{item.instructions}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

@@ -1,8 +1,8 @@
 .workoutsContainer {
   background-color: #0f1a0a;
-/* display: flex; */
+
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .workoutsBanner {
@@ -35,35 +35,46 @@
 }
 
 .workoutSelectionBtns {
-
   margin-top: 30px;
-   display: flex;
-   gap: 40px;
- 
+  display: flex;
+  gap: 40px;
 }
 
 .workoutBtnAll,
 .strength,
-.cardioButton,
-.stretchButton,
+.cardio,
+.stretching,
 .powerlifting,
-.plyometricsButton {
-
+.plyometrics {
   border-radius: 20px;
   height: 40px;
   width: 100px;
 }
 
-
 .workoutBtnAll {
   background-color: green;
 }
-
 
 .strength,
 .cardioButton,
 .stretchButton,
 .powerlifting,
-.plyometricsButton {
+.plyometrics {
   background-color: darkgray;
+}
+
+.activeClass,
+.workoutBtnActive {
+  background-color: green;
+}
+
+.workoutsList {
+  margin-top: 100px;
+  margin-left: 20px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr 1fr);
+}
+
+.workoutCard {
 }

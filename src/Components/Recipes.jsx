@@ -171,7 +171,7 @@ export default function MealPlan() {
             }}
             className="closeButton"
           >
-            Close
+            
           </button>
           <img
             src={selectRecipe.image}

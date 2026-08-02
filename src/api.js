@@ -6,10 +6,12 @@ export const getRecipes = async () => {
   return data;
 };
 
-export const getWorkouts = async (muscle = "") => {
-  const url = muscle
-    ? `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`
-    : `https://api.api-ninjas.com/v1/exercises`;
+export const getWorkouts = async (type = "", muscle = "") => {
+  const params = new URLSearchParams();
+  if (type && type !== "all") params.append("type", type);
+  if (muscle) params.append("muscle", muscle);
+  
+  const url = `https://api.api-ninjas.com/v1/exercises${params.toString() ? "?" + params.toString() : ""}`;
 
   const res = await fetch(url, {
     headers: {
