@@ -1,4 +1,4 @@
-// import React from "react";
+
 import "./workouts.css";
 import { getWorkouts } from "../api";
 import { useState, useEffect } from "react";
@@ -13,8 +13,17 @@ export default function Workouts() {
   useEffect(() => {
     const loadWorkouts = async () => {
       try {
-        const response = await getWorkouts(type);
-        setData(response);
+        const types = [
+          "cardio",
+          "strength",
+          "stretching",
+          "powerlifting",
+          "plyometrics",
+          "strongman",
+        ];
+        const results = await Promise.all(types.map((t) => getWorkouts(t)));
+        const combined = results.flat();
+        setData(combined);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -22,7 +31,7 @@ export default function Workouts() {
       }
     };
     loadWorkouts();
-  }, [type]);
+  }, []);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -103,11 +112,28 @@ export default function Workouts() {
             console.log(item);
             return (
               <div className="workoutCard" key={index}>
-                <p className="workoutName">{item.name}</p>
-                <p className="workoutType">{item.type}</p>
-                <p className="workoutDifficulty"> {item.difficulty}</p>
-                <p className="workoutMuscle">{item.muscle}</p>
-                <p className="workoutEquipment">{item.equipments}</p>
+                <p className="workoutName">
+                  EXERCISE TYPE: <br />
+                  {item.name}
+                </p>
+                <p className="workoutType">CATEGORY: {item.type}</p>
+                <p className="workoutDifficulty">
+                  DIFFICULTY: {item.difficulty}
+                </p>
+                <span className={`difficultyBadge ${item.difficulty}`}>
+                  {item.difficulty}
+                </span>
+                <hr className="cardDivider" />
+                <p className="workoutMuscle">MUSCLE GROUP: {item.muscle}</p>
+                <p className="workoutEquipment">
+                  EQUIPMENT TYPE:{" "}
+                  {item.equipments &&
+                    item.equipments.map((eq, i) => (
+                      <span className="equipmentTag" key={i}>
+                        {eq}
+                      </span>
+                    ))}
+                </p>
                 <div className="instructions">
                   Workout Instructions
                   <p className="workoutInstructions">{item.instructions}</p>

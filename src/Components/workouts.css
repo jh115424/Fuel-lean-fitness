@@ -1,6 +1,5 @@
 .workoutsContainer {
   background-color: #0f1a0a;
-
   height: 100vh;
   overflow-y: auto;
 }
@@ -15,23 +14,32 @@
   margin-top: 100px;
   background-color: rgb(6, 3, 3);
   border-radius: 10px;
+  background: linear-gradient(to right, #0f1a0a, #1a2e10);
+  border-bottom: 2px solid lime;
 }
+
 .bannerImage {
   height: 200px;
   margin-right: 20px;
   border: 2px solid lime;
   border-radius: 20px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .bannerLabel {
   color: rgb(28 183 59);
   margin-left: 20px;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .exerciseTitle {
   color: white;
-
-  font-size: 30px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 8px;
 }
 
 .workoutSelectionBtns {
@@ -49,6 +57,33 @@
   border-radius: 20px;
   height: 40px;
   width: 100px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.workoutSelectionBtns {
+  margin-top: 30px;
+  display: flex;
+  gap: 40px;
+}
+
+.workoutBtnAll,
+.strength,
+.cardio,
+.stretching,
+.powerlifting,
+.plyometrics {
+  border-radius: 20px;
+  height: 40px;
+  width: 100px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
 }
 
 .workoutBtnAll {
@@ -63,18 +98,116 @@
   background-color: darkgray;
 }
 
+.cardio,
+.stretching {
+  background-color: darkgray;
+  color: #1a1a1a;
+}
+
 .activeClass,
 .workoutBtnActive {
   background-color: green;
+  color: white;
 }
-
 .workoutsList {
   margin-top: 100px;
   margin-left: 20px;
   color: white;
+  background-color: black;
   display: grid;
   grid-template-columns: repeat(2, 1fr 1fr);
+  gap: 20px;
+  padding: 20px;
 }
 
 .workoutCard {
+  background-color: blue;
+  border-radius: 10px;
+  padding: 16px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.workoutCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.workoutName {
+  text-align: center;
+  font-size: 18px;
+  background-color: green;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  margin: -16px -16px 12px -16px;
+}
+
+.workoutType,
+.workoutDifficulty,
+.workoutMuscle,
+.workoutEquipment,
+.workoutEquipment {
+  margin-left: 10px;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.cardDivider {
+  border: none;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+  margin: 10px 0;
+}
+
+.instructions {
+  margin-left: 10px;
+  color: red;
+  font-size: 24px;
+  text-align: center;
+}
+
+.workoutInstructions {
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.difficultyBadge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  text-transform: capitalize;
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+
+.difficultyBadge.beginner {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.difficultyBadge.intermediate {
+  background-color: #f59e0b;
+  color: #fff;
+}
+
+.difficultyBadge.expert {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.equipmentTag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  margin: 2px;
+  text-transform: capitalize;
 }

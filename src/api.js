@@ -12,6 +12,7 @@ export const getWorkouts = async (type = "", muscle = "") => {
   if (muscle) params.append("muscle", muscle);
   
   const url = `https://api.api-ninjas.com/v1/exercises${params.toString() ? "?" + params.toString() : ""}`;
+  console.log(url);
 
   const res = await fetch(url, {
     headers: {
@@ -19,5 +20,35 @@ export const getWorkouts = async (type = "", muscle = "") => {
     },
   });
   const data = await res.json();
-  return data;
+  return Array.isArray(data) ? data : [];
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export const getWorkouts = async (type = "", muscle = "") => {
+//   const params = new URLSearchParams();
+//   if (type && type !== "all") params.append("type", type);
+//   if (muscle) params.append("muscle", muscle);
+  
+//   const url = `https://api.api-ninjas.com/v1/exercises${params.toString() ? "?" + params.toString() : ""}`;
+//   console.log(url);
+
+//   const res = await fetch(url, {
+//     headers: {
+//       "X-Api-Key": "hUydRWdF9Y70wwgu2FW2KSVjDf1kdLfTdWfUh9du",
+//     },
+//   });
+//   const data = await res.json();
+//   return data;
+// };
