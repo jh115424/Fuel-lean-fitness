@@ -33,7 +33,9 @@ export default function DashBoard() {
             <p>REMAINING TODAY</p>
             <h2 className="leftOverCalories">{remaining}</h2>
           </div>
+        
         </div>
+        
         <div className="dashBoardMainContent">
           <div className="leftColumn">
             <FoodLog

@@ -54,15 +54,16 @@
 }
 
 .homeLink button {
-  margin-top: 400px;
+  /* margin-top: 400px; */
   width: 100px;
   border-radius: 10px;
+  margin: 20px;
 }
 
 .homePageButton {
   height: 40px;
   background-color: #38bdf8;
-  margin-top: 400px;
+  /* margin-top: 400px; */
 }
 
 .goHome {

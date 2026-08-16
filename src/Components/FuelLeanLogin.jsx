@@ -2,7 +2,7 @@ import "./fuelLeanLogin.css";
 import { useState } from "react";
 import dumbbell from "../assets/dumbbell-xxl.png";
 import { useNavigate } from "react-router-dom";
-import { getRecipes } from "../api";
+// import { getRecipes } from "../api";
 
 export default function FuelLeanLogin() {
   const [firstName, setFirstName] = useState("");

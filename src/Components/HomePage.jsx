@@ -14,8 +14,8 @@ import progressClock from "../assets/progressClock.png";
 import HomePageMiddleIntro from "./HomePageMiddleIntro";
 
 export default function HomePage() {
-  const [goal, setGoal] = useState(2200);
-  const [eat, setEaten] = useState(1283);
+  const [goal] = useState(2200);
+  const [eat] = useState(1283);
 
   const [isOpen, setIsOpen] = useState(true);
 
