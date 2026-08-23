@@ -1,21 +1,12 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NutritionalWheel from "./NutritionalWheel";
 import TodaysWorkoutBox from "./TodaysWorkoutBox";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import "./homePageMiddleIntro.css";
 import salmonMacroBowlHeader from "../assets/salmonMacroBowlHeader.webp";
 import FeaturedHomePageMeals from "./FeaturedHomePageMeals";
 
-
-
 export default function HomePageMiddleIntro() {
-  const [carbs, getCarbs] = useState(0);
-  const [protein, setProtein] = useState(0);
-  const [fats, getFats] = useState(0);
-  const [loading, isLoading] = useState(false);
-  const [error, setError] = useState(null);
-
   return (
     <>
       <div className="middleContainer">
@@ -49,7 +40,6 @@ export default function HomePageMiddleIntro() {
         </div>
 
         <FeaturedHomePageMeals />
-    
       </div>
     </>
   );

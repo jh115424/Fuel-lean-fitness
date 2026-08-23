@@ -1,7 +1,4 @@
-import { PieChart, Pie, Cell, XAxis, ResponsiveContainer } from "recharts";
-import { useState } from "react";
-import { useParams } from "react-router";
-import { useEffect } from "react";
+import { Cell, XAxis, ResponsiveContainer } from "recharts";
 import { BarChart, Bar } from "recharts";
 import "./weeklyCaloriesChart.css";
 
@@ -28,26 +25,27 @@ const weeklyData = [
 export default function WeeklyCaloriesChart() {
   return (
     <>
-   jsx<div className="weeklyCalorieBarContainer">
-  <div className="weeklyBarWrapper">
-    <h4 className="barGraphTitle">WeeklyCalories</h4>
-    <ResponsiveContainer width="100%" height={150}>
-      <BarChart
-        className="barChartGraph"
-        data={weeklyData}
-        width={800}
-        height={150}
-      >
-        <Bar dataKey="calories">
-          {weeklyData.map((day, index) => (
-            <Cell key={day.day} fill={colorChart[index]} />
-          ))}
-        </Bar>
-        <XAxis dataKey="day"></XAxis>
-      </BarChart>
-    </ResponsiveContainer>
-  </div>
-</div>
+      jsx
+      <div className="weeklyCalorieBarContainer">
+        <div className="weeklyBarWrapper">
+          <h4 className="barGraphTitle">WeeklyCalories</h4>
+          <ResponsiveContainer width="100%" height={150}>
+            <BarChart
+              className="barChartGraph"
+              data={weeklyData}
+              width={800}
+              height={150}
+            >
+              <Bar dataKey="calories">
+                {weeklyData.map((day, index) => (
+                  <Cell key={day.day} fill={colorChart[index]} />
+                ))}
+              </Bar>
+              <XAxis dataKey="day"></XAxis>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
     </>
   );
 }

@@ -1,15 +1,18 @@
 import { Link } from "react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./progress.css"
 
 
 
 export default function Progress () {
       const [progress, setProgress] = useState("");
+        const [loading, setLoading] = useState(true);
 
     return (
         <>
-        
+        <div className="progressPageWrapper">
+            
+        </div>
         </>
     )
 }
