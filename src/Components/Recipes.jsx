@@ -1,8 +1,8 @@
 import { getRecipes } from "../api";
-// import dashBoard from "../assets/dashBoard.png";
+import dashBoard from "../assets/dashBoard.png";
 import { useEffect, useState } from "react";
 import "./recipes.css";
-// import { Link } from "react-router";
+import { Link } from "react-router";
 export default function MealPlan() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -10,18 +10,24 @@ export default function MealPlan() {
   const [selectRecipe, setSelectRecipe] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [diet, setDiet] = useState("all");
-  const [saved, setSaved] = useState([]);
-const handleClick = (item) => {
-  setSaved((prevSaved) =>
-    prevSaved.some(fav => fav.id === item.id)
-      ? prevSaved.filter(fav => fav.id !== item.id)
-      : [...prevSaved, item],
+  const [saved, setSaved] = useState(
+    JSON.parse(localStorage.getItem("favorites")) || [],
   );
-};
+  const handleClick = (item) => {
+    if (saved.length >= 3 && !saved.some((fav) => fav.id === item.id)) {
+      return;
+    }
 
-useEffect(() => {
-  localStorage.setItem("favorites", JSON.stringify(saved));
-}, [saved]);
+    setSaved((prevSaved) =>
+      prevSaved.some((fav) => fav.id === item.id)
+        ? prevSaved.filter((fav) => fav.id !== item.id)
+        : [...prevSaved, item],
+    );
+  };
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(saved));
+  }, [saved]);
 
   useEffect(() => {
     const loadRecipes = async () => {
@@ -169,11 +175,8 @@ useEffect(() => {
                   </div>
                 </div>
 
-                <div
-                  className="savedHeart"
-                  onClick={() => handleClick(item)}
-                >
-                  {saved.some(fav => fav.id === item.id) ? "❤️" : "♡"}
+                <div className="savedHeart" onClick={() => handleClick(item)}>
+                  {saved.some((fav) => fav.id === item.id) ? "❤️" : "♡"}
                 </div>
               </div>
             );
@@ -214,13 +217,13 @@ useEffect(() => {
               </div>
             ))}
           </div>
-          {/* <Link to="/home" className="homeLink">
-          <button type="button" className="homePageButton">
-            <img src={dashBoard} className="goHome" />
-          </button>
-        </Link> */}
         </div>
       )}
+      <Link to="/home" className="homeLink">
+        <button type="button" className="homePageButton">
+          <img src={dashBoard} className="goHome" />
+        </button>
+      </Link>
     </>
   );
 }
