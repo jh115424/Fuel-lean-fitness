@@ -3,7 +3,6 @@ import "./workouts.css";
 import { getWorkouts } from "../api";
 import { useState, useEffect } from "react";
 import blackWomanWorkingOut from "../assets/blackWomanWorkingOut.png";
-import Footer from "./Footer";
 import dashBoard from "../assets/dashBoard.png";
 
 export default function Workouts() {
@@ -46,13 +45,12 @@ export default function Workouts() {
   return (
     <>
       <div className="workoutsContainer">
-           <Link to="/home" className="homeLink">
+        <Link to="/home" className="homeLink">
           <button type="button" className="homePageButton">
             <img src={dashBoard} className="goHome" />
           </button>
         </Link>
         <div className="workoutsBanner">
-          
           <div className="bannerLabel">
             TODAY
             <header className="exerciseTitle">Push Day - Chest and Abs</header>
@@ -151,8 +149,8 @@ export default function Workouts() {
           })}
         </div>
       </div>
-      <Footer />
-            <div className="copyRight">Fuel lean fitness. All Rights Reserved.</div>
+
+      <div className="copyRight">Fuel lean fitness. All Rights Reserved.</div>
     </>
   );
 }

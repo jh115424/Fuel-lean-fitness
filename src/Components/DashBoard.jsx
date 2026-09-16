@@ -8,9 +8,9 @@ import SuggestedRecipe from "./SuggestedRecipe.jsx";
 import WeeklyCaloriesChart from "./WeeklyCaloriesChart.jsx";
 
 export default function DashBoard() {
-  // const [goal, setGoal] = useState(2200);   use later
+
   const goal = 2200;
-  // const [eat, setEaten] = useState(1283);   use later
+
   const eat = 1283;
 
   const [loggedMeals, setLoggedMeals] = useState([]);

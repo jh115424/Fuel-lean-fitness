@@ -3,7 +3,6 @@ import { getRecipes } from "../api";
 import "./suggestedRecipe.css";
 
 export default function SuggestedRecipe() {
-  // const [suggestedRecipe, setSuggestedRecipe] = useState(null)
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 

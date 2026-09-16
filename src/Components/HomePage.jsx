@@ -1,7 +1,6 @@
 import "./homePage.css";
 import TopSearchBar from "./TopSearchBar";
 
-import Footer from "./Footer.jsx";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import dumbbell from "../assets/dumbbell-xxl.png";
@@ -10,7 +9,7 @@ import recipesHat from "../assets/recipesHat.png";
 import workoutDumbbell from "../assets/workoutDumbbell.png";
 import favoriteRecipes from "../assets/favoriteRecipes.jpg";
 import dashboard from "../assets/dashBoard.png";
-import progressClock from "../assets/progressClock.png";
+
 import HomePageMiddleIntro from "./HomePageMiddleIntro";
 
 export default function HomePage() {
@@ -61,13 +60,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="progressLink">
-              <Link to="/progress">
-                <img src={progressClock} className="sideMenuImage" />
-                <p className="progress">Progress</p>
-              </Link>
-            </div>
-
             <div className="dailyProgress">
               <DailyProgressCircle goal={goal} eat={eat} />
             </div>
@@ -83,7 +75,7 @@ export default function HomePage() {
           <HomePageMiddleIntro />
         </div>
       </div>
-      <Footer />
+
       <div className="copyRight">Fuel lean fitness. All Rights Reserved.</div>
     </>
   );

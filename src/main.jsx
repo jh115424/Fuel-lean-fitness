@@ -6,10 +6,8 @@ import DashBoard from "./Components/DashBoard";
 import Recipes from "./Components/Recipes.jsx";
 import Workouts from "./Components/Workouts.jsx";
 import Favorites from "./Components/Favorites.jsx";
-import Progress from "./Components/Progress.jsx";
+
 import Legal from "./Components/Legal.jsx";
-
-
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -23,7 +21,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/recipes" element={<Recipes />} />
       <Route path="/workouts" element={<Workouts />} />
       <Route path="/favorites" element={<Favorites />} />
-      <Route path="/progress" element={<Progress />} />
     </Routes>
   </BrowserRouter>,
 );

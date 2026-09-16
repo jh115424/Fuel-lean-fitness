@@ -2,7 +2,7 @@ import "./fuelLeanLogin.css";
 import { useState } from "react";
 import dumbbell from "../assets/dumbbell-xxl.png";
 import { useNavigate } from "react-router-dom";
-// import { getRecipes } from "../api";
+import { loginUser, registerUser } from "../api";
 
 export default function FuelLeanLogin() {
   const [firstName, setFirstName] = useState("");
@@ -16,13 +16,36 @@ export default function FuelLeanLogin() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError(null);
-    navigate("/home");
-  };
+    setError("");
 
+    try {
+      if (isRegistering) {
+        const name = `${firstName} ${lastName}`;
+        const data = await registerUser(name, email, password);
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          navigate("/home");
+        } else {
+          setError(data.message);
+        }
+      } else {
+        const data = await loginUser(email, password);
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          navigate("/home");
+        } else {
+          setError(data.message);
+        }
+      }
+    } catch {
+      setError("Something went wrong. Try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <>
       <div className="topFuelLogo">
@@ -43,6 +66,7 @@ export default function FuelLeanLogin() {
                 <div className="sideOneBox">
                   <input
                     type="text"
+                    autoComplete="new-password"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder="First name"
@@ -52,6 +76,7 @@ export default function FuelLeanLogin() {
                 <div className="sideTwoBox">
                   <input
                     type="text"
+                    autoComplete="new-password"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="Last name"
