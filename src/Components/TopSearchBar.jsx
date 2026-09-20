@@ -76,9 +76,15 @@ export default function TopSearchBar({
 
           {isProfileMenuOpen && (
             <div className="logout-box">
-              <Link to="/login" onClick={() => setIsProfileMenuOpen(false)}>
-                Logout
-              </Link>
+              <Link 
+  to="/" 
+  onClick={() => {
+    localStorage.removeItem("token");
+    setIsProfileMenuOpen(false);
+  }}
+>
+  Logout
+</Link>
             </div>
           )}
         </div>

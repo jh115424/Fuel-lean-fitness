@@ -15,11 +15,46 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/login" element={<FuelLeanLogin />} />
       <Route path="/legal" element={<Legal />} />
       <Route path="/" element={<FuelLeanLogin />} />
-      <Route path="/home" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
-      <Route path="/dashboard" element={<ProtectedRoute><DashBoard /></ProtectedRoute>} />
-      <Route path="/recipes" element={<ProtectedRoute><Recipes /></ProtectedRoute>} />
-      <Route path="/workouts" element={<ProtectedRoute><Workouts /></ProtectedRoute>} />
-      <Route path="/favorites" element={<ProtectedRoute><Favorites /></ProtectedRoute>} />
+      <Route
+        path="/home"
+        element={
+          <ProtectedRoute>
+            <HomePage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <DashBoard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/recipes"
+        element={
+          <ProtectedRoute>
+            <Recipes />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/workouts"
+        element={
+          <ProtectedRoute>
+            <Workouts />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/favorites"
+        element={
+          <ProtectedRoute>
+            <Favorites />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   </BrowserRouter>,
 );
