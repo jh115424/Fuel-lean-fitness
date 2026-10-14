@@ -75,6 +75,27 @@
   }
 }
 
+
+@media (max-width: 1512px) {
+  .middleContainer {
+    max-width: calc(100vw - 180px);
+  }
+
+ .heroRow {
+  transform: scale(0.85);
+  transform-origin: top left;
+  margin-left: 120px;
+}
+ 
+}
+/* 
+@media (max-width: 700px) {
+  .middleContainer {
+    max-width: 100%;
+  }
+} */
+
+
 @media (max-width: 768px) {
   .heroRow {
     display: flex;

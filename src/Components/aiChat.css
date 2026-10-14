@@ -1,0 +1,59 @@
+.aiChatContainer {
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  border: .5px solid #2d2d4e;
+}
+
+.aiChatTitle {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.aiChatInput {
+  width: 100%;
+  background-color: #2d2d4e;
+  border: .5px solid #7c3aed;
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  font-size: 14px;
+  resize: none;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.aiChatButton {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.aiChatButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.aiChatError {
+  color: #ef4444;
+  font-size: 13px;
+}
+
+.aiChatResponse {
+  background-color: #2d2d4e;
+  border-radius: 8px;
+  padding: 14px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 12px;
+}

@@ -24,7 +24,7 @@ export default function Favorites() {
   return (
     <>
       <div className="favoritesContainer">
-        <div className="title">
+        <div className="favPageTitle">
           <header>My Favorites</header>
           <div className="homeButton">
             {" "}

@@ -42,3 +42,51 @@ export const loginUser = async (email, password) => {
   const data = await res.json();
   return data;
 };
+
+export const askAI = async (prompt) => {
+  const res = await fetch("http://localhost:5001/api/ai/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt }),
+  });
+  const data = await res.json();
+  return data;
+};
+
+export const askAIStream = (prompt, onChunk, onDone) => {
+  fetch("http://localhost:5001/api/ai/stream", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt }),
+  }).then((res) => {
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+
+    const read = () => {
+      reader.read().then(({ done, value }) => {
+        if (done) {
+          onDone();
+          return;
+        }
+
+        const text = decoder.decode(value);
+        const lines = text.split("\n");
+
+        lines.forEach((line) => {
+          if (line.startsWith("data: ")) {
+            const data = line.replace("data: ", "");
+            if (data === "[DONE]") {
+              onDone();
+            } else if (data.trim()) {
+              onChunk(data);
+            }
+          }
+        });
+
+        read();
+      });
+    };
+
+    read();
+  });
+};

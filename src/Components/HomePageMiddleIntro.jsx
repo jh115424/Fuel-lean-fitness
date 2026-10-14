@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import NutritionalWheel from "./NutritionalWheel";
 import TodaysWorkoutBox from "./TodaysWorkoutBox";
-// import Footer from "./Footer";
 import "./homePageMiddleIntro.css";
+import AiChat from "./AiChat";
 import salmonMacroBowlHeader from "../assets/salmonMacroBowlHeader.webp";
 import FeaturedHomePageMeals from "./FeaturedHomePageMeals";
 
@@ -40,6 +40,7 @@ export default function HomePageMiddleIntro() {
         </div>
 
         <FeaturedHomePageMeals />
+        <AiChat />
       </div>
     </>
   );

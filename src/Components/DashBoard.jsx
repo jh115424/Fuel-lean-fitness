@@ -6,9 +6,9 @@ import FoodLog from "../Components/FoodLog.jsx";
 import Goals from "../Components/Goals.jsx";
 import SuggestedRecipe from "./SuggestedRecipe.jsx";
 import WeeklyCaloriesChart from "./WeeklyCaloriesChart.jsx";
+import MealPlanGenerator from "./MealPlanGenerator";
 
 export default function DashBoard() {
-
   const goal = 2200;
 
   const eat = 1283;
@@ -33,9 +33,8 @@ export default function DashBoard() {
             <p>REMAINING TODAY</p>
             <h2 className="leftOverCalories">{remaining}</h2>
           </div>
-        
         </div>
-        
+
         <div className="dashBoardMainContent">
           <div className="leftColumn">
             <FoodLog
@@ -50,6 +49,8 @@ export default function DashBoard() {
             <Goals />
           </div>
         </div>
+
+        <MealPlanGenerator />
         <Link to="/home" className="homeLink">
           <button type="button" className="homePageButton">
             <img src={dashBoard} className="goHome" />

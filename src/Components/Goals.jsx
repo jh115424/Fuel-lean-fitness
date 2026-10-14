@@ -99,10 +99,19 @@ export default function Goals() {
             )}
           </div>
         </div>
-        <div className="goalButtons">
-          <button className="edit" onClick={() => setIsEditing(true)}>Edit goals</button>
-          <button className="save" onClick={() => setIsEditing(false)}>Save</button>
-        </div>
+<div className="goalButtons">
+  <button className="edit" onClick={() => setIsEditing(true)}>Edit goals</button>
+  <button className="save" onClick={() => {
+    localStorage.setItem("goals", JSON.stringify({
+      calories,
+      protein,
+      carbs,
+      fats: fat,
+      goalType,
+    }));
+    setIsEditing(false);
+  }}>Save</button>
+</div>
       </div>
     </>
   );

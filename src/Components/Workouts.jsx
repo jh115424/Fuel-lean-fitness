@@ -4,6 +4,7 @@ import { getWorkouts } from "../api";
 import { useState, useEffect } from "react";
 import blackWomanWorkingOut from "../assets/blackWomanWorkingOut.png";
 import dashBoard from "../assets/dashBoard.png";
+import WorkoutRecommender from "./WorkoutRecommender";
 
 export default function Workouts() {
   const [data, setData] = useState([]);
@@ -148,6 +149,8 @@ export default function Workouts() {
             );
           })}
         </div>
+<WorkoutRecommender />
+
       </div>
 
       <div className="copyRight">Fuel lean fitness. All Rights Reserved.</div>
