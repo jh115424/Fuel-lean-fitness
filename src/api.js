@@ -1,3 +1,16 @@
+export const getUserIdFromToken = () => {
+  const token = localStorage.getItem("token");
+  if (!token) return null;
+  
+  try {
+    const payload = JSON.parse(atob(token.split(".")[1]));
+    return payload.id;
+  } catch {
+    return null;
+  }
+};
+
+
 export const getRecipes = async () => {
   const res = await fetch(
     "https://api.spoonacular.com/recipes/complexSearch?number=20&addRecipeNutrition=true&addRecipeInstructions=true&apiKey=e1c00f86d237464d96be3204b2d22468",
@@ -89,4 +102,24 @@ export const askAIStream = (prompt, onChunk, onDone) => {
 
     read();
   });
+};
+
+
+export const saveAIResponse = async (userId, type, prompt, response) => {
+  const res = await fetch("http://localhost:5001/api/ai/save", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ userId, type, prompt, response }),
+  });
+  const data = await res.json();
+  return data;
+};
+
+export const getAIHistory = async (userId) => {
+  const res = await fetch(`http://localhost:5001/api/ai/history/${userId}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const data = await res.json();
+  return data;
 };

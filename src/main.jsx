@@ -8,6 +8,8 @@ import Workouts from "./Components/Workouts.jsx";
 import Favorites from "./Components/Favorites.jsx";
 import Legal from "./Components/Legal.jsx";
 import ProtectedRoute from "./Components/ProtectedRoute.jsx";
+import AiHistory from "./Components/AiHistory";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -15,6 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/login" element={<FuelLeanLogin />} />
       <Route path="/legal" element={<Legal />} />
       <Route path="/" element={<FuelLeanLogin />} />
+      <Route path="/ai-history" element={<ProtectedRoute><AiHistory /></ProtectedRoute>} />
       <Route
         path="/home"
         element={

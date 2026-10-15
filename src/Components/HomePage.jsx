@@ -1,6 +1,5 @@
 import "./homePage.css";
 import TopSearchBar from "./TopSearchBar";
-
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import dumbbell from "../assets/dumbbell-xxl.png";
@@ -9,7 +8,7 @@ import recipesHat from "../assets/recipesHat.png";
 import workoutDumbbell from "../assets/workoutDumbbell.png";
 import favoriteRecipes from "../assets/favoriteRecipes.jpg";
 import dashboard from "../assets/dashBoard.png";
-
+import ai from "../assets/ai.png";
 import HomePageMiddleIntro from "./HomePageMiddleIntro";
 
 export default function HomePage() {
@@ -57,6 +56,13 @@ export default function HomePage() {
               <Link to="/favorites">
                 <img src={favoriteRecipes} className="sideMenuImage" />
                 <p className="favorites">Favorites</p>
+              </Link>
+            </div>
+
+            <div className="historyLink">
+              <Link to="/ai-history">
+                <img src={ai} className="sideMenuImage" />
+                <p className="history">AI History</p>
               </Link>
             </div>
 

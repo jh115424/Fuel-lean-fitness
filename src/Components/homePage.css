@@ -8,7 +8,6 @@ body {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(to right, #000000, #0a0a23);
-
   display: flex;
   align-items: flex-start;
 }
@@ -91,7 +90,8 @@ body {
 .recipeLink a,
 .workoutLink a,
 .favoritesLink a,
-.progressLink a {
+.progressLink a,
+.historyLink a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +109,8 @@ body {
 .recipe,
 .workouts,
 .favorites,
-.progress {
+.progress,
+.history {
   color: white;
   font-size: 16px;
   margin: 0;
@@ -132,7 +133,8 @@ body {
 .recipeLink,
 .workoutLink,
 .favoritesLink,
-.progressLink {
+.progressLink,
+.historyLink {
   margin-bottom: 20px;
 }
 
@@ -140,7 +142,8 @@ body {
 .recipeLink,
 .workoutLink,
 .favoritesLink,
-.progressLink {
+.progressLink,
+.historyLink {
   width: 100%;
 }
 

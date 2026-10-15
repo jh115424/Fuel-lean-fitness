@@ -1,21 +1,19 @@
 import { useState } from "react";
-import { askAI } from "../api";
+import { askAI, saveAIResponse, getUserIdFromToken } from "../api";
 import "./mealPlanGenerator.css";
 
 export default function MealPlanGenerator() {
-const [goals] = useState(
-  JSON.parse(localStorage.getItem("goals")) || null
-);
+  const [goals] = useState(JSON.parse(localStorage.getItem("goals")) || null);
   const [mealPlan, setMealPlan] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-// useEffect(() => {
-//   const savedGoals = JSON.parse(localStorage.getItem("goals"));
-//   if (savedGoals) {
-//     setGoals(savedGoals);
-//   }
-// }, [setGoals]);
+  // useEffect(() => {
+  //   const savedGoals = JSON.parse(localStorage.getItem("goals"));
+  //   if (savedGoals) {
+  //     setGoals(savedGoals);
+  //   }
+  // }, [setGoals]);
 
   const handleGenerate = async () => {
     if (!goals) {
@@ -27,7 +25,7 @@ const [goals] = useState(
     setError("");
     setMealPlan("");
 
-const prompt = `You are creating a personalized meal plan. Here are the user's details:
+    const prompt = `You are creating a personalized meal plan. Here are the user's details:
 - Goal type: ${goals.goalType}
 - Daily calorie target: ${goals.calories} calories
 - Daily protein target: ${goals.protein}g protein
@@ -53,6 +51,11 @@ Keep meals practical and easy to make with common ingredients.`;
       const data = await askAI(prompt);
       if (data.response) {
         setMealPlan(data.response);
+
+        const userId = getUserIdFromToken();
+        if (userId) {
+          saveAIResponse(userId, "meal-plan", prompt, data.response);
+        }
       } else {
         setError("No response from AI. Try again.");
       }
@@ -68,12 +71,20 @@ Keep meals practical and easy to make with common ingredients.`;
       <h3 className="mealPlanTitle">AI Meal Plan Generator</h3>
       {goals ? (
         <div className="mealPlanGoalsSummary">
-          <p>Goal: <span>{goals.goalType}</span></p>
-          <p>Calories: <span>{goals.calories}</span></p>
-          <p>Protein: <span>{goals.protein}g</span></p>
+          <p>
+            Goal: <span>{goals.goalType}</span>
+          </p>
+          <p>
+            Calories: <span>{goals.calories}</span>
+          </p>
+          <p>
+            Protein: <span>{goals.protein}g</span>
+          </p>
         </div>
       ) : (
-        <p className="mealPlanNoGoals">No goals set. Go to Dashboard to set your goals.</p>
+        <p className="mealPlanNoGoals">
+          No goals set. Go to Dashboard to set your goals.
+        </p>
       )}
       <button
         className="mealPlanButton"
@@ -89,5 +100,8 @@ Keep meals practical and easy to make with common ingredients.`;
         </div>
       )}
     </div>
+    
   );
+
+  
 }

@@ -1,0 +1,125 @@
+.aiHistoryPage {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #000000, #0a0a23);
+}
+
+.aiHistoryContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #000000, #0a0a23);
+  padding: 100px 40px 40px 40px;
+  box-sizing: border-box;
+}
+
+.aiHistoryTitle {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.aiHistorySubtitle {
+  color: #22c55e;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+}
+
+.aiHistoryFilters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.aiFilterBtn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.aiFilterBtn.active {
+  background-color: #22c55e;
+  border-color: #22c55e;
+  color: white;
+}
+
+.aiHistoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+}
+
+.aiHistoryCard {
+  background-color: #0f1e30;
+  border-radius: 12px;
+  border: 0.5px solid #1e3a50;
+  padding: 20px;
+}
+
+.aiHistoryCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.aiHistoryType {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.aiHistoryType.meal-plan {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.aiHistoryType.workout {
+  background-color: rgba(124, 58, 237, 0.15);
+  color: #7c3aed;
+}
+
+.aiHistoryDate {
+  color: #4a6080;
+  font-size: 12px;
+}
+
+.aiHistoryResponse {
+  color: #c0c0c0;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.aiHistoryLoading {
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 16px;
+}
+
+.aiHistoryError {
+  color: #ef4444;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 16px;
+}
+
+.aiHistoryEmpty {
+  color: #4a6080;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 15px;
+}

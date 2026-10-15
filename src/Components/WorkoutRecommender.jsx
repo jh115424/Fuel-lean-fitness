@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { askAI } from "../api";
+import { askAI, saveAIResponse, getUserIdFromToken } from "../api";
 import "./workoutRecommender.css";
 
 export default function WorkoutRecommender() {
@@ -15,11 +15,11 @@ export default function WorkoutRecommender() {
     setError("");
     setRecommendation("");
 
- const goalInfo = goals
-  ? `- Fitness goal: ${goals.goalType}`
-  : "- No specific fitness goal set";
+    const goalInfo = goals
+      ? `- Fitness goal: ${goals.goalType}`
+      : "- No specific fitness goal set";
 
-const prompt = `You are creating a personalized ${workoutType} workout. Here are the user's details:
+    const prompt = `You are creating a personalized ${workoutType} workout. Here are the user's details:
 ${goalInfo}
 
 Create a 45 minute ${workoutType} workout routine.
@@ -39,6 +39,11 @@ Keep the language clear and motivating.`;
       const data = await askAI(prompt);
       if (data.response) {
         setRecommendation(data.response);
+
+        const userId = getUserIdFromToken();
+        if (userId) {
+          saveAIResponse(userId, "workout", prompt, data.response);
+        }
       } else {
         setError("No response from AI. Try again.");
       }
