@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import blackWomanWorkingOut from "../assets/blackWomanWorkingOut.png";
 import dashBoard from "../assets/dashBoard.png";
 import WorkoutRecommender from "./WorkoutRecommender";
+import Footer from "./Footer";
 
 export default function Workouts() {
   const [data, setData] = useState([]);
@@ -46,11 +47,11 @@ export default function Workouts() {
   return (
     <>
       <div className="workoutsContainer">
-        <Link to="/home" className="homeLink">
-          <button type="button" className="homePageButton">
+        {/* <Link to="/home" className="homeLink">
+          <button type="button" className="homePageButtonThree">
             <img src={dashBoard} className="goHome" />
           </button>
-        </Link>
+        </Link> */}
         <div className="workoutsBanner">
           <div className="bannerLabel">
             TODAY
@@ -112,6 +113,12 @@ export default function Workouts() {
           >
             Plyometrics
           </button>
+
+          <Link to="/home" className="homeLink">
+            <button type="button" className="homePageButtonThree">
+              <img src={dashBoard} className="goHome" />
+            </button>
+          </Link>
         </div>
 
         <div className="workoutsList">
@@ -149,8 +156,8 @@ export default function Workouts() {
             );
           })}
         </div>
-<WorkoutRecommender />
-
+        <WorkoutRecommender />
+        <Footer />
       </div>
 
       <div className="copyRight">Fuel lean fitness. All Rights Reserved.</div>

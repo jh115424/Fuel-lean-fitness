@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import dashBoard from "../assets/dashBoard.png";
 import FoodLog from "../Components/FoodLog.jsx";
 import Goals from "../Components/Goals.jsx";
+import Footer from "./Footer.jsx";
 import SuggestedRecipe from "./SuggestedRecipe.jsx";
 import WeeklyCaloriesChart from "./WeeklyCaloriesChart.jsx";
 import MealPlanGenerator from "./MealPlanGenerator";
@@ -28,6 +29,11 @@ export default function DashBoard() {
           <div className="dashBoardTitle">
             <p>MY DASHBOARD</p>
             <h2>Personal Overview</h2>
+            <Link to="/home" className="homeLink">
+              <button type="button" className="homePageButton">
+                <img src={dashBoard} className="goHome" />
+              </button>
+            </Link>
           </div>
           <div className="dailyCaloriesLeft">
             <p>REMAINING TODAY</p>
@@ -51,11 +57,11 @@ export default function DashBoard() {
         </div>
 
         <MealPlanGenerator />
-        <Link to="/home" className="homeLink">
-          <button type="button" className="homePageButton">
-            <img src={dashBoard} className="goHome" />
-          </button>
-        </Link>
+
+        <Footer />
+        <div className="copyRightFour">
+          Fuel lean fitness. All Rights Reserved.
+        </div>
       </div>
     </>
   );

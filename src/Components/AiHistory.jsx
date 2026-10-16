@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { getAIHistory, getUserIdFromToken } from "../api";
 import "./aiHistory.css";
+import { Link } from "react-router-dom";
+import dashboard from "../assets/dashBoard.png";
+import Footer from "./Footer";
 
 export default function AiHistory() {
   const [history, setHistory] = useState([]);
@@ -64,13 +67,17 @@ export default function AiHistory() {
             All
           </button>
           <button
-            className={filter === "meal-plan" ? "aiFilterBtn active" : "aiFilterBtn"}
+            className={
+              filter === "meal-plan" ? "aiFilterBtn active" : "aiFilterBtn"
+            }
             onClick={() => setFilter("meal-plan")}
           >
             Meal Plans
           </button>
           <button
-            className={filter === "workout" ? "aiFilterBtn active" : "aiFilterBtn"}
+            className={
+              filter === "workout" ? "aiFilterBtn active" : "aiFilterBtn"
+            }
             onClick={() => setFilter("workout")}
           >
             Workouts
@@ -78,7 +85,9 @@ export default function AiHistory() {
         </div>
 
         {filteredHistory.length === 0 ? (
-          <p className="aiHistoryEmpty">No history found. Generate a meal plan or workout to get started.</p>
+          <p className="aiHistoryEmpty">
+            No history found. Generate a meal plan or workout to get started.
+          </p>
         ) : (
           <div className="aiHistoryList">
             {filteredHistory.map((item) => (
@@ -87,7 +96,9 @@ export default function AiHistory() {
                   <span className={`aiHistoryType ${item.type}`}>
                     {item.type === "meal-plan" ? "🍽 Meal Plan" : "💪 Workout"}
                   </span>
-                  <span className="aiHistoryDate">{formatDate(item.createdAt)}</span>
+                  <span className="aiHistoryDate">
+                    {formatDate(item.createdAt)}
+                  </span>
                 </div>
                 <div className="aiHistoryResponse">
                   <p>{item.response}</p>
@@ -97,7 +108,16 @@ export default function AiHistory() {
           </div>
         )}
       </div>
-         
+      <div className="dashBoardLink">
+        <Link to="/dashboard" className="dashBoardPage">
+          <img src={dashboard} className="sideMenuImage" />
+          <p className="dashBoard">Dashboard</p>
+        </Link>
+      </div>
+      <Footer />
+      <div className="copyRightFour">
+        Fuel lean fitness. All Rights Reserved.
+      </div>
     </div>
   );
 }

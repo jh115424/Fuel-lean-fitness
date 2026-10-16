@@ -1,5 +1,6 @@
 import "./favorites.css";
 import dashBoard from "../assets/dashBoard.png";
+import Footer from "./Footer";
 import { Link } from "react-router";
 import { useEffect, useState } from "react";
 
@@ -80,6 +81,10 @@ export default function Favorites() {
               </div>
             );
           })}
+        </div>
+        <Footer />
+        <div className="copyRightTwo">
+          Fuel lean fitness. All Rights Reserved.
         </div>
       </div>
     </>

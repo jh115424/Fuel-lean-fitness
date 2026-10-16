@@ -3,6 +3,7 @@ import dashBoard from "../assets/dashBoard.png";
 import { useEffect, useState } from "react";
 import "./recipes.css";
 import { Link } from "react-router";
+import Footer from "./Footer";
 export default function MealPlan() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -97,6 +98,12 @@ export default function MealPlan() {
             Gluten Free
           </button>
         </div>
+        <Link to="/home" className="homeLink">
+          <button type="button" className="homePageButtonTwo">
+            <img src={dashBoard} className="goHome" />
+          </button>
+        </Link>
+
         <ul className="imageAndRecipeWrapper">
           {filteredRecipes.map((item) => {
             console.log(item);
@@ -208,6 +215,7 @@ export default function MealPlan() {
               </div>
             ))}
           </div>
+
           <div className="recipeStepsWrapper">
             {selectRecipe.analyzedInstructions[0].steps.map((step) => (
               <div key={step.number} className="recipeSteps">
@@ -219,11 +227,11 @@ export default function MealPlan() {
           </div>
         </div>
       )}
-      <Link to="/home" className="homeLink">
-        <button type="button" className="homePageButton">
-          <img src={dashBoard} className="goHome" />
-        </button>
-      </Link>
+
+      <Footer />
+      <div className="copyRightThree">
+        Fuel lean fitness. All Rights Reserved.
+      </div>
     </>
   );
 }

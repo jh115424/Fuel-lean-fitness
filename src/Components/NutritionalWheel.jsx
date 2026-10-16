@@ -2,7 +2,7 @@ import "./nutritionalWheel.css";
 import { PieChart, Pie, Cell } from "recharts";
 
 export default function NutritionalWheel({ protein, carbs, fats }) {
-console.log({ carbs, protein, fats });
+  console.log({ carbs, protein, fats });
 
   return (
     <>

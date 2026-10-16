@@ -60,6 +60,11 @@ li {
   font-size: 14px;
 }
 
+.homePageButtonTwo {
+  height: 40px;
+  background-color: #38bdf8;
+}
+
 .recipeTag {
   color: #39ff14;
   margin-top: 15px;
@@ -178,6 +183,10 @@ li {
   background-color: rgb(28 183 59);
 }
 
+.copyRightThree {
+  color: black;
+  text-align: center;
+}
 .titleMotto {
   color: white;
   margin-left: 20px;

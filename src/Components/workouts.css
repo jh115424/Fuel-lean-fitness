@@ -18,6 +18,11 @@
   border-bottom: 2px solid lime;
 }
 
+.homePageButtonThree {
+  height: 40px;
+  background-color: #38bdf8;
+}
+
 .bannerImage {
   height: 200px;
   margin-right: 20px;
@@ -67,7 +72,9 @@
 .workoutSelectionBtns {
   margin-top: 30px;
   display: flex;
+  justify-content: space-between;
   gap: 40px;
+  align-items: center;
 }
 
 .workoutBtnAll,
@@ -110,8 +117,9 @@
   color: white;
 }
 .workoutsList {
-  margin-top: 100px;
+  margin-top: 25px;
   margin-left: 20px;
+  margin-right: 20px;
   color: white;
   background-color: black;
   display: grid;

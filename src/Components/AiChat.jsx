@@ -2,6 +2,7 @@ import { useState } from "react";
 import { askAIStream } from "../api";
 import "./aiChat.css";
 
+
 export default function AiChat() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
@@ -45,6 +46,9 @@ const handleAsk = () => {
           <p>{response}</p>
         </div>
       )}
+
+
     </div>
+    
   );
 }

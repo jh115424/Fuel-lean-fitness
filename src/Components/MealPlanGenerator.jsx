@@ -100,8 +100,5 @@ Keep meals practical and easy to make with common ingredients.`;
         </div>
       )}
     </div>
-    
   );
-
-  
 }

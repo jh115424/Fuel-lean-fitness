@@ -12,6 +12,11 @@ body {
   align-items: flex-start;
 }
 
+.copyRight {
+  color: black;
+  text-align: center;
+}
+
 .topMenuGroup {
   display: flex;
   flex-direction: column;

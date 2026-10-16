@@ -54,6 +54,7 @@ export default function FeaturedHomePageMeals() {
           </li>
         ))}
       </ul>
+      
     </>
   );
 }
