@@ -116,7 +116,7 @@ export default function AiHistory() {
       </div>
       <Footer />
       <div className="copyRightFour">
-        Fuel lean fitness. All Rights Reserved.
+         Fuel Lean Fitness 2026. All Rights Reserved.
       </div>
     </div>
   );

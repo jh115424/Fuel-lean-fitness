@@ -6,8 +6,6 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import me from "../assets/me.jpg";
 import "./topSearchBar.css";
 
-// import { getWorkouts} from "../api";
-
 export default function TopSearchBar({
   toggleMenu,
   searchText,
@@ -64,7 +62,9 @@ export default function TopSearchBar({
 
         <div className={`logoutImage ${isProfileMenuOpen ? "" : "closed"}`}>
           <img src={me} className="myLoginImage" onClick={logoutToggle} />
-          <span className="dropdown-arrow" onClick={logoutToggle}>⌄</span>
+          <span className="dropdown-arrow" onClick={logoutToggle}>
+            ⌄
+          </span>
 
           {isProfileMenuOpen && (
             <div className="legal-verbiage">
@@ -76,15 +76,15 @@ export default function TopSearchBar({
 
           {isProfileMenuOpen && (
             <div className="logout-box">
-              <Link 
-  to="/" 
-  onClick={() => {
-    localStorage.removeItem("token");
-    setIsProfileMenuOpen(false);
-  }}
->
-  Logout
-</Link>
+              <Link
+                to="/"
+                onClick={() => {
+                  localStorage.removeItem("token");
+                  setIsProfileMenuOpen(false);
+                }}
+              >
+                Logout
+              </Link>
             </div>
           )}
         </div>

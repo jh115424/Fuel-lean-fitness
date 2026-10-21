@@ -14,7 +14,7 @@
 
 .heroRow {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 15px;
 }
 .pageLogoAndImage p {
@@ -38,6 +38,7 @@
 
 .salmonBigBowl {
   height: 220px;
+  width: 300px;
   border-radius: 5px;
   margin-top: 25px;
 }
@@ -45,70 +46,37 @@
 @media (max-width: 480px) {
   .middleContainer {
     flex-direction: column;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
   }
 
   .heroRow {
+    margin: 30px;
     flex-direction: column;
+  }
 
-    width: 479px;
+  .macroOverview {
+    display: flex;
+    width: 87%;
+    justify-content: center;
   }
 
   .pageLogoAndImage {
     text-align: center;
-  }
-
-  .homePageMainImage {
-    align-self: center;
-    width: 479px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .salmonBigBowl {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .pageLogoAndImage p,
-  .pageLogoAndImage h5 {
-    margin-left: unset;
-  }
-}
-
-
-@media (max-width: 1512px) {
-  .middleContainer {
-    max-width: calc(100vw - 180px);
-  }
-
- .heroRow {
-  transform: scale(0.85);
-  transform-origin: top left;
-  margin-left: 120px;
-}
- 
-}
-/* 
-@media (max-width: 700px) {
-  .middleContainer {
-    max-width: 100%;
-  }
-} */
-
-
-@media (max-width: 768px) {
-  .heroRow {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .middleContainer {
-    max-width: 767px;
-  }
-  .salmonBigBowl {
-    width: 300px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
+}
+
+.homePageMainImage {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageLogoAndImage p,
+.pageLogoAndImage h5 {
+  margin-left: unset;
 }

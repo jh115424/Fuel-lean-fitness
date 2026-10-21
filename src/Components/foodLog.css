@@ -79,16 +79,6 @@
   color: #38bdf8;
 }
 
-/* Background gradient: #0d1520 to #0a0f1a
-Card background: #0f1e30
-Card border: #1e3a50
-Inner border/dividers: #152840
-Accent blue (buttons, labels, highlights): #38bdf8
-Muted text: #4a6080
-Body text: #e2e8f0
-Unfilled bar chart days: #1e3a50
-Button text: #0a0f1a */
-
 @media (max-width: 480px) {
   .foodLogContainer {
     width: 100%;
@@ -101,9 +91,6 @@ Button text: #0a0f1a */
   }
 
   .loggedMealsContainer {
-
     gap: 40px;
   }
-
-  
 }

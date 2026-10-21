@@ -35,7 +35,6 @@ export default function SuggestedRecipe() {
 
   if (loading) return <p>Adding...</p>;
   if (error) return <p>Error: {error} </p>;
-  // if (!suggestedRecipe) return null;
 
   return (
     <>

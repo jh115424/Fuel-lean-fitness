@@ -219,3 +219,37 @@
   margin: 2px;
   text-transform: capitalize;
 }
+
+@media (max-width: 480px) {
+  .workoutsContainer {
+    width: 100%;
+  }
+
+  .bannerImage {
+    height: 170px;
+  }
+
+  .exerciseTitle {
+    font-size: 24px;
+  }
+
+  .workoutsList {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .workoutRecommenderContainer {
+    text-align: center;
+  }
+
+  .workoutTypeSelector {
+    justify-content: center;
+  }
+
+  .workoutSelectionBtns {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

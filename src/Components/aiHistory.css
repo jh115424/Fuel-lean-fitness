@@ -15,8 +15,8 @@
 }
 
 .copyRightFour {
-    color: black;
-    text-align: center;
+  color: black;
+  text-align: center;
 }
 
 .aiHistoryTitle {
@@ -127,4 +127,18 @@
   text-align: center;
   margin-top: 60px;
   font-size: 15px;
+}
+@media (max-width: 480px) {
+  .aiHistoryTitle,
+  .aiHistorySubtitle {
+    text-align: center;
+  }
+
+  .aiHistoryFilters {
+    justify-content: center;
+  }
+
+  .copyRightFour {
+    color: white;
+  }
 }

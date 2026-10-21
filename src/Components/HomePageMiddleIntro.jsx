@@ -5,7 +5,7 @@ import "./homePageMiddleIntro.css";
 import AiChat from "./AiChat";
 import salmonMacroBowlHeader from "../assets/salmonMacroBowlHeader.webp";
 import FeaturedHomePageMeals from "./FeaturedHomePageMeals";
-import Footer from "./Footer";
+
 
 export default function HomePageMiddleIntro() {
   return (
@@ -42,7 +42,6 @@ export default function HomePageMiddleIntro() {
 
         <FeaturedHomePageMeals />
         <AiChat />
-        <Footer />
       </div>
     </>
   );

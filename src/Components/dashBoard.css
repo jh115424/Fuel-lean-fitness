@@ -28,6 +28,10 @@
 .topCalorieHeader header {
   margin: 0;
 }
+.copyRightFour {
+  color: white;
+  margin-top: 20px;
+}
 
 .dailyCaloriesLeft {
   background-color: #0f1e30;
@@ -54,7 +58,6 @@
 }
 
 .homeLink button {
-  /* margin-top: 400px; */
   width: 100px;
   border-radius: 10px;
   margin: 20px;
@@ -63,11 +66,16 @@
 .homePageButton {
   height: 40px;
   background-color: #38bdf8;
-  /* margin-top: 400px; */
 }
 
 .goHome {
   height: 30px;
+}
+
+.dashBoardPage {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dashBoardMainContent {
@@ -94,5 +102,17 @@
   .dashBoardMainContent {
     display: flex;
     flex-direction: column;
+  }
+
+  .homeLink button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dashBoardPage {
+    width: 80%;
   }
 }

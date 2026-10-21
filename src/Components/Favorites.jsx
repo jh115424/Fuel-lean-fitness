@@ -72,11 +72,11 @@ export default function Favorites() {
                         : item.diets[0]}
                     </div>
                   </div>
-                </div>
-                <div className="deleteMeal">
-                  <p className="letterX" onClick={() => removeRecipe(item)}>
-                    X
-                  </p>
+                  <div className="deleteMeal">
+                    <p className="letterX" onClick={() => removeRecipe(item)}>
+                      X
+                    </p>
+                  </div>
                 </div>
               </div>
             );
@@ -84,7 +84,7 @@ export default function Favorites() {
         </div>
         <Footer />
         <div className="copyRightTwo">
-          Fuel lean fitness. All Rights Reserved.
+          Fuel Lean Fitness 2026. All Rights Reserved.
         </div>
       </div>
     </>

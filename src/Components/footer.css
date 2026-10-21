@@ -6,7 +6,6 @@
 }
 
 .siteDisclaimer {
-  width: 100%;
   padding: 20px 40px;
   background-color: #111;
   border-top: 1px solid #2a2a2a;
@@ -20,8 +19,4 @@
   line-height: 1.7;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.homePageButtonTwo {
-  
 }

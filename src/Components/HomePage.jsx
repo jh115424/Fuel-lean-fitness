@@ -82,7 +82,10 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="copyRight">Fuel lean fitness. All Rights Reserved.</div>
+      <div className="copyRight">
+        {" "}
+        Fuel Lean Fitness 2026. All Rights Reserved.
+      </div>
     </>
   );
 }

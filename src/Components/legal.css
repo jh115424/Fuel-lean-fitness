@@ -79,3 +79,20 @@
   color: rgb(100, 218, 100);
   font-weight: 600;
 }
+
+.copyRightFive {
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+
+  .legalText {
+        margin: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+
+  }
+}

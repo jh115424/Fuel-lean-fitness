@@ -152,27 +152,9 @@ body {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .homePageBody {
-    flex-direction: column;
-  }
-
-  .sideMenuBar,
-  .recipeLink {
-    width: 100%;
-  }
-
-  .mainMenu,
-  .homePage {
-    margin-left: unset;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
-
 @media (max-width: 480px) {
   .homePageBody {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .sideMenuBar,

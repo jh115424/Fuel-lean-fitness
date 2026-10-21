@@ -2,30 +2,29 @@ import { useState } from "react";
 import { askAIStream } from "../api";
 import "./aiChat.css";
 
-
 export default function AiChat() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-const handleAsk = () => {
-  if (!prompt) return;
+  const handleAsk = () => {
+    if (!prompt) return;
 
-  setLoading(true);
-  setError("");
-  setResponse("");
+    setLoading(true);
+    setError("");
+    setResponse("");
 
-  askAIStream(
-    prompt,
-    (chunk) => {
-      setResponse((prev) => prev + chunk);
-    },
-    () => {
-      setLoading(false);
-    }
-  );
-};
+    askAIStream(
+      prompt,
+      (chunk) => {
+        setResponse((prev) => prev + chunk);
+      },
+      () => {
+        setLoading(false);
+      },
+    );
+  };
 
   return (
     <div className="aiChatContainer">
@@ -46,9 +45,6 @@ const handleAsk = () => {
           <p>{response}</p>
         </div>
       )}
-
-
     </div>
-    
   );
 }

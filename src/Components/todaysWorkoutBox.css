@@ -69,11 +69,6 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .todaysWorkoutBreakdown {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .todaysWorkoutBreakdown p {
     text-align: center;
   }

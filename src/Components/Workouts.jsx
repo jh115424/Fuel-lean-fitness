@@ -47,11 +47,6 @@ export default function Workouts() {
   return (
     <>
       <div className="workoutsContainer">
-        {/* <Link to="/home" className="homeLink">
-          <button type="button" className="homePageButtonThree">
-            <img src={dashBoard} className="goHome" />
-          </button>
-        </Link> */}
         <div className="workoutsBanner">
           <div className="bannerLabel">
             TODAY
@@ -160,7 +155,7 @@ export default function Workouts() {
         <Footer />
       </div>
 
-      <div className="copyRight">Fuel lean fitness. All Rights Reserved.</div>
+      <div className="copyRight">Fuel Lean Fitness 2026. All Rights Reserved.</div>
     </>
   );
 }

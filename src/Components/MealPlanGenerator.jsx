@@ -8,13 +8,6 @@ export default function MealPlanGenerator() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // useEffect(() => {
-  //   const savedGoals = JSON.parse(localStorage.getItem("goals"));
-  //   if (savedGoals) {
-  //     setGoals(savedGoals);
-  //   }
-  // }, [setGoals]);
-
   const handleGenerate = async () => {
     if (!goals) {
       setError("Please set your goals in the Dashboard first.");
