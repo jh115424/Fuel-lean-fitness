@@ -1,7 +1,7 @@
 export const getUserIdFromToken = () => {
   const token = localStorage.getItem("token");
   if (!token) return null;
-  
+
   try {
     const payload = JSON.parse(atob(token.split(".")[1]));
     return payload.id;
@@ -9,7 +9,6 @@ export const getUserIdFromToken = () => {
     return null;
   }
 };
-
 
 export const getRecipes = async () => {
   const res = await fetch(
@@ -37,37 +36,46 @@ export const getWorkouts = async (type = "", muscle = "") => {
 };
 
 export const registerUser = async (name, email, password) => {
-  const res = await fetch("http://localhost:5001/api/auth/register", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, password }),
-  });
+  const res = await fetch(
+    "https://fuel-lean-fitness-backend.onrender.com/api/auth/register",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, password }),
+    },
+  );
   const data = await res.json();
   return data;
 };
 
 export const loginUser = async (email, password) => {
-  const res = await fetch("http://localhost:5001/api/auth/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
-  });
+  const res = await fetch(
+    "https://fuel-lean-fitness-backend.onrender.com/api/auth/login",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    },
+  );
   const data = await res.json();
   return data;
 };
 
 export const askAI = async (prompt) => {
-  const res = await fetch("http://localhost:5001/api/ai/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt }),
-  });
+  const res = await fetch(
+    "https://fuel-lean-fitness-backend.onrender.com/api/ai/chat",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt }),
+    },
+  );
   const data = await res.json();
   return data;
 };
 
 export const askAIStream = (prompt, onChunk, onDone) => {
-  fetch("http://localhost:5001/api/ai/stream", {
+  fetch("https://fuel-lean-fitness-backend.onrender.com/api/ai/stream", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ prompt }),
@@ -104,22 +112,27 @@ export const askAIStream = (prompt, onChunk, onDone) => {
   });
 };
 
-
 export const saveAIResponse = async (userId, type, prompt, response) => {
-  const res = await fetch("http://localhost:5001/api/ai/save", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ userId, type, prompt, response }),
-  });
+  const res = await fetch(
+    "https://fuel-lean-fitness-backend.onrender.com/api/ai/save",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, type, prompt, response }),
+    },
+  );
   const data = await res.json();
   return data;
 };
 
 export const getAIHistory = async (userId) => {
-  const res = await fetch(`http://localhost:5001/api/ai/history/${userId}`, {
-    method: "GET",
-    headers: { "Content-Type": "application/json" },
-  });
+  const res = await fetch(
+    `https://fuel-lean-fitness-backend.onrender.com/api/ai/history/${userId}`,
+    {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    },
+  );
   const data = await res.json();
   return data;
 };
