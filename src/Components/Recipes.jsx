@@ -230,7 +230,7 @@ export default function MealPlan() {
 
       <Footer />
       <div className="copyRightThree">
-           Fuel Lean Fitness 2026. All Rights Reserved.
+        Fuel lean fitness. All Rights Reserved.
       </div>
     </>
   );
