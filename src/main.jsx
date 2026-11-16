@@ -10,14 +10,20 @@ import Legal from "./Components/Legal.jsx";
 import ProtectedRoute from "./Components/ProtectedRoute.jsx";
 import AiHistory from "./Components/AiHistory";
 
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
       <Route path="/login" element={<FuelLeanLogin />} />
       <Route path="/legal" element={<Legal />} />
       <Route path="/" element={<FuelLeanLogin />} />
-      <Route path="/ai-history" element={<ProtectedRoute><AiHistory /></ProtectedRoute>} />
+      <Route
+        path="/ai-history"
+        element={
+          <ProtectedRoute>
+            <AiHistory />
+          </ProtectedRoute>
+        }
+      />
       <Route
         path="/home"
         element={

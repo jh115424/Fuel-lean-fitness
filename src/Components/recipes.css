@@ -60,11 +60,6 @@ li {
   font-size: 14px;
 }
 
-.homePageButtonTwo {
-  height: 40px;
-  background-color: #38bdf8;
-}
-
 .recipeTag {
   color: #39ff14;
   margin-top: 15px;
@@ -183,10 +178,6 @@ li {
   background-color: rgb(28 183 59);
 }
 
-.copyRightThree {
-  color: black;
-  text-align: center;
-}
 .titleMotto {
   color: white;
   margin-left: 20px;
@@ -216,7 +207,7 @@ li {
 @media (max-width: 480px) {
   .dietPickButtons {
     margin-left: unset;
-    gap: 10px;
+
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
@@ -243,6 +234,14 @@ li {
     margin-top: 60px;
     justify-content: center;
     margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageAndRecipeWrapper {
+    margin-top: 80px;
+    justify-content: center;
     margin-left: auto;
   }
 }

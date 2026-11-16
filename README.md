@@ -1,22 +1,16 @@
-Fuel Lean Fitness
-I built this as my full stack fitness app while learning React, Node.js, and working with real APIs. It's a nutrition and workout tracker with a clean dark UI built around a fitness aesthetic.
-This started as a frontend project and evolved into something I'm genuinely proud of. Every page was built from scratch — no templates, no UI kits.
-What's inside:
+# React + Vite
 
-Recipe page with macro filtering (High Protein, Low Carb, Paleo, Gluten Free) powered by the Spoonacular API
-Dashboard with a food log, weekly calorie bar chart, suggested recipe, and editable goals section
-Workouts page with exercise filtering by type powered by the API Ninjas Exercises API
-Login and authentication flow
-Responsive design across all pages
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Built with:
+Currently, two official plugins are available:
 
-React
-React Router
-Recharts
-SASS/CSS
-Spoonacular API
-API Ninjas Exercises API
-Node.js / Express (backend coming)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Note: This project is still in active development. Backend integration is the next phase.
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

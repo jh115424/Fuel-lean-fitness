@@ -3,6 +3,7 @@
   margin-left: auto;
   font-size: 20px;
   margin-right: auto;
+  margin-top: 40px;
 }
 
 .featuredRecipesContainer {
@@ -65,6 +66,14 @@
 .macroBlock p {
   color: white;
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .featuredRecipesContainer {
+    flex: 0 0 calc((100% - 40px) / 3);
+    flex-wrap: wrap;
+    height: 150px;
+  }
 }
 
 @media (max-width: 480px) {

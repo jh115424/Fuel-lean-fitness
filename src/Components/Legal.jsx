@@ -62,9 +62,6 @@ export default function Legal() {
             <p>HOME</p>
           </Link>
         </div>
-        <div className="copyRightFive">
-          Fuel Lean Fitness 2026. All Rights Reserved.
-        </div>
       </div>
     </>
   );

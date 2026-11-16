@@ -4,6 +4,7 @@
   display: flex;
   border-radius: 10px;
   flex-direction: row;
+  margin-top: 25px;
 }
 
 .macroBreakdown {
@@ -74,6 +75,7 @@
 @media (max-width: 480px) {
   .macroWheelBreakdown {
     display: flex;
+    flex-direction: column;
   }
   .macroPieWrapper {
     margin-top: 0;
@@ -82,13 +84,9 @@
   }
 
   .macroBreakdown {
+    margin-top: 0;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .macroOverview {
-    display: flex;
-    justify-content: center;
   }
 }

@@ -259,9 +259,10 @@
   .copyRight {
     text-align: center;
   }
+}
 
-    .todaysMac {
+@media (max-width: 480px) {
+  .todaysMac {
     text-align: center;
   }
 }
-
